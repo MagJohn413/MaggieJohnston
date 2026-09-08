@@ -1,58 +1,46 @@
-// ================================
-// WEBSITE NAVIGATION
-// ================================
+// Reusable navigation system for GitHub Pages
 
-document.addEventListener("DOMContentLoaded", function () {
+function loadNavigation() {
+    const primaryNavItems = [
+        { name: "Home", link: "index.html" },
+        { name: "About", link: "about.html" },
+        { name: "Services", link: "services.html" },
+        { name: "Contact", link: "contact.html" }
+    ];
 
-    const navigation = `
-        <header>
+    const secondaryNavItems = [
+        { name: "FAQ", link: "faq.html" },
+        { name: "Support", link: "support.html" },
+        { name: "Blog", link: "blog.html" }
+    ];
 
-            <div class="header-top">
-
-                <div class="logo">
-                    <a href="index.html">Logo</a>
-                </div>
-
-                <div class="header-info">
-
-                    <div class="header-description">
-                        <p>
-                            This area is for informational graphics
-                            which describe what your site is about.
-                        </p>
-                    </div>
-
-                    <nav class="primary-nav">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-
-                    <nav class="secondary-nav">
-                        <ul>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                        </ul>
-                    </nav>
-
-                </div>
-
-            </div>
-
-        </header>
+    // Build primary nav
+    const primaryNav = document.createElement("nav");
+    primaryNav.className = "primary-nav";
+    primaryNav.innerHTML = `
+        <ul>
+            ${primaryNavItems
+                .map(item => `<li><a href="${item.link}">${item.name}</a></li>`)
+                .join("")}
+        </ul>
     `;
 
-    // Find the navigation container
-    const navContainer = document.getElementById("navigation");
+    // Build secondary nav
+    const secondaryNav = document.createElement("nav");
+    secondaryNav.className = "secondary-nav";
+    secondaryNav.innerHTML = `
+        <ul>
+            ${secondaryNavItems
+                .map(item => `<li><a href="${item.link}">${item.name}</a></li>`)
+                .join("")}
+        </ul>
+    `;
 
-    // Insert navigation
-    if (navContainer) {
-        navContainer.innerHTML = navigation;
-    }
+    // Insert into page
+    const header = document.querySelector("header");
+    header.appendChild(primaryNav);
+    header.appendChild(secondaryNav);
+}
 
-});
+// Load navigation when page is ready
+document.addEventListener("DOMContentLoaded", loadNavigation);
