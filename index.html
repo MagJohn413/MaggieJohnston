@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Maggie Johnston | Marketing Portfolio</title>
+    <title>About Me | Maggie</title>
 
     <style>
         * {
@@ -15,316 +16,225 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            color: #3d3d3d;
-            background-color: #ffffff;
-            line-height: 1.5;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            text-align: center;
-            padding: 55px 20px 25px;
-            border-bottom: 1px solid #d6d6d6;
-        }
-
-        header h1 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 52px;
-            letter-spacing: 8px;
-            font-weight: 600;
-            color: #363434;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 16px;
-            letter-spacing: 2px;
-            color: #777;
-        }
-
-        /* =========================
-           MAIN LAYOUT
-        ========================= */
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 35px 45px 60px;
-            display: grid;
-            grid-template-columns: 32% 68%;
-            gap: 55px;
-        }
-
-        /* =========================
-           LEFT COLUMN
-        ========================= */
-
-        .left-column {
-            padding-right: 10px;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 25px;
-            letter-spacing: 6px;
-            margin-bottom: 23px;
-            color: #363434;
-        }
-
-        .about-text {
-            font-size: 15px;
-            color: #626262;
+            background-color: #f7f5f2;
+            color: #333;
             line-height: 1.6;
         }
 
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 14px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        .contact-icon {
-            width: 25px;
-            font-size: 17px;
-            margin-right: 10px;
-        }
-
-        .contact-item a {
-            color: #555;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* =========================
-           EDUCATION
-        ========================= */
-
-        .education-item {
-            margin-bottom: 22px;
-        }
-
-        .education-item h3 {
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 2px;
-        }
-
-        .education-item p {
-            font-size: 14px;
-            color: #666;
-            margin: 2px 0;
-        }
-
-        .date {
-            font-size: 11px;
-            color: #555;
-            margin-left: 8px;
-        }
-
-        /* =========================
-           OTHER EXPERIENCE
-        ========================= */
-
-        .other-item {
-            margin-bottom: 20px;
-        }
-
-        .other-item h3 {
-            font-size: 14px;
-            margin-bottom: 2px;
-        }
-
-        .other-item p {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.45;
-        }
-
-        /* =========================
-           RIGHT COLUMN
-        ========================= */
-
-        .right-column {
-            padding-left: 5px;
-        }
-
-        .experience-title {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 25px;
-            letter-spacing: 6px;
-            margin-bottom: 30px;
-            color: #363434;
-        }
-
-        .job {
-            margin-bottom: 34px;
-        }
-
-        .job-header {
+        /* Navigation */
+        nav {
+            background-color: #ffffff;
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            gap: 20px;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .job h3 {
-            font-size: 15px;
+        nav .logo {
+            font-size: 24px;
             font-weight: bold;
-            color: #414141;
+            color: #333;
         }
 
-        .job-date {
-            font-size: 14px;
-            font-weight: bold;
-            white-space: nowrap;
-            color: #414141;
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
         }
 
-        .job p {
-            font-size: 14px;
-            color: #5f5f5f;
-            margin-top: 7px;
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
         }
 
-        /* =========================
-           ABOUT / MARKETING SECTION
-        ========================= */
+        nav ul li a:hover {
+            color: #8a6f5a;
+        }
 
-        .marketing-section {
-            background-color: #f7f5f2;
-            padding: 70px 15%;
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #eee8e1, #ffffff);
         }
 
-        .marketing-section h2 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 30px;
-            letter-spacing: 5px;
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 15px;
+            color: #2f2f2f;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #8a6f5a;
             margin-bottom: 25px;
         }
 
-        .marketing-section p {
-            max-width: 850px;
-            margin: 0 auto 15px;
-            color: #5f5f5f;
-            font-size: 16px;
-            line-height: 1.7;
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
         }
 
-        /* =========================
-           SKILLS
-        ========================= */
+        .button {
+            display: inline-block;
+            padding: 13px 28px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
 
-        .skills-section {
-            padding: 65px 10%;
+        .button:hover {
+            background-color: #8a6f5a;
+        }
+
+        /* About Section */
+        .about {
+            padding: 90px 10%;
+            background-color: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Skills */
+        .skills {
+            padding: 90px 10%;
+            background-color: #f7f5f2;
             text-align: center;
         }
 
-        .skills-section h2 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 30px;
-            letter-spacing: 5px;
-            margin-bottom: 35px;
-        }
-
-        .skills {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+        .skills-container {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .skill {
-            border: 1px solid #d0d0d0;
-            padding: 13px 25px;
-            font-size: 14px;
-            letter-spacing: 1px;
-            color: #555;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background-color: #373535;
-            color: white;
-            text-align: center;
+            background-color: white;
             padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
-        footer h2 {
-            font-family: Georgia, "Times New Roman", serif;
-            letter-spacing: 4px;
+        .skill h3 {
+            margin-bottom: 10px;
+            color: #8a6f5a;
+        }
+
+        /* Experience */
+        .experience {
+            padding: 90px 10%;
+            background-color: white;
+        }
+
+        .experience-container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .experience-box {
+            margin-top: 30px;
+            padding: 30px;
+            border-left: 4px solid #8a6f5a;
+            background-color: #f7f5f2;
+        }
+
+        .experience-box h3 {
             margin-bottom: 10px;
         }
 
-        footer p {
-            font-size: 14px;
-            color: #ddd;
+        /* Contact */
+        .contact {
+            padding: 80px 10%;
+            text-align: center;
+            background-color: #333;
+            color: white;
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
 
-        @media (max-width: 850px) {
+        .contact p {
+            margin-bottom: 25px;
+        }
 
-            header h1 {
-                font-size: 38px;
-                letter-spacing: 5px;
+        .contact .button {
+            background-color: white;
+            color: #333;
+        }
+
+        .contact .button:hover {
+            background-color: #8a6f5a;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 45px;
             }
 
-            .container {
-                grid-template-columns: 1fr;
-                padding: 35px 25px;
-            }
-
-            .left-column {
-                padding-right: 0;
-            }
-
-            .right-column {
-                padding-left: 0;
-            }
-
-            .job-header {
+            nav {
                 flex-direction: column;
-                gap: 3px;
+                gap: 15px;
             }
 
-            .marketing-section {
-                padding: 55px 25px;
+            nav ul {
+                gap: 15px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 500px) {
-
-            header h1 {
-                font-size: 30px;
-                letter-spacing: 4px;
-            }
-
-            .section-title,
-            .experience-title {
-                font-size: 22px;
-                letter-spacing: 4px;
+            .skills-container {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -332,406 +242,90 @@
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================= -->
-
-    <header>
-        <h1>MAGGIE JOHNSTON</h1>
-        <p>MARKETING • DIGITAL MEDIA • CONTENT CREATION</p>
-    </header>
-
-
-    <!-- =========================
-         MAIN RESUME INFORMATION
-    ========================= -->
-
-    <main class="container">
-
-        <!-- LEFT COLUMN -->
-
-        <aside class="left-column">
-
-            <!-- ABOUT -->
-
-            <section class="section">
-                <h2 class="section-title">ABOUT ME</h2>
-
-                <p class="about-text">
-                    I’m a senior at Iowa State studying Marketing. I started
-                    my education at DMACC, where I played volleyball and
-                    earned my associate’s degree in business. I work
-                    part-time with Visit Boone County, where I focus on
-                    marketing, communications, and event promotion.
-                    Getting experience in things like bus tours, RAGBRAI,
-                    & all things tourism, I enjoy creating engaging content,
-                    connecting with people, and sharing stories in creative
-                    ways.
-                </p>
-            </section>
-
-
-            <!-- CONTACT -->
-
-            <section class="section">
-                <h2 class="section-title">CONTACT</h2>
-
-                <div class="contact-item">
-                    <span class="contact-icon">☎</span>
-                    <span>515-236-1569</span>
-                </div>
-
-                <div class="contact-item">
-                    <span class="contact-icon">✉</span>
-                    <a href="mailto:margovb14@gmail.com">
-                        margovb14@gmail.com
-                    </a>
-                </div>
-
-                <div class="contact-item">
-                    <span class="contact-icon">🌐</span>
-                    <a href="https://maggiejohnstonportfolio.my.canva.site/"
-                       target="_blank">
-                        maggiejohnstonportfolio.my.canva.site
-                    </a>
-                </div>
-            </section>
-
-
-            <!-- EDUCATION -->
-
-            <section class="section">
-                <h2 class="section-title">EDUCATION</h2>
-
-                <div class="education-item">
-                    <h3>IOWA STATE UNIVERSITY</h3>
-
-                    <p>Future Bachelor's of Science; Marketing</p>
-
-                    <p>
-                        Ames, IA
-                        <span class="date">• 2025-2027</span>
-                    </p>
-                </div>
-
-
-                <div class="education-item">
-                    <h3>DMACC BOONE</h3>
-
-                    <p>Associates of Business</p>
-
-                    <p>
-                        Boone, IA
-                        <span class="date">• 2023-2025</span>
-                    </p>
-                </div>
-            </section>
-
-
-            <!-- OTHER -->
-
-            <section class="section">
-                <h2 class="section-title">OTHER</h2>
-
-                <div class="other-item">
-                    <h3>AAU VOLLEYBALL COACH</h3>
-                    <p>2026-Present</p>
-                    <p>Ogden AAU</p>
-                    <p>2022-2025 Boone Inferno</p>
-                </div>
-
-                <div class="other-item">
-                    <h3>COLLEGE STUDENT ATHLETE</h3>
-                    <p>2023-2025</p>
-                    <p>DMACC Volleyball</p>
-                </div>
-
-                <div class="other-item">
-                    <h3>EDGE STUDENT</h3>
-                    <p>2021-2023</p>
-                    <p>Boone High School</p>
-                </div>
-
-                <div class="other-item">
-                    <h3>YSS MENTOR</h3>
-                    <p>2021-2023</p>
-                    <p>Boone Community School District</p>
-                </div>
-
-            </section>
-
-        </aside>
-
-
-        <!-- RIGHT COLUMN -->
-
-        <section class="right-column">
-
-            <h2 class="experience-title">WORK EXPERIENCE</h2>
-
-
-            <!-- VISIT BOONE COUNTY -->
-
-            <div class="job">
-
-                <div class="job-header">
-                    <h3>VISIT BOONE COUNTY - MRKT COORDINATOR</h3>
-
-                    <span class="job-date">
-                        (Aug 2025 - PRESENT)
-                    </span>
-                </div>
-
-                <p>
-                    Tasks: Make & Schedule Posts, Newsletters, Flyers, &
-                    Invites
-                </p>
-
-            </div>
-
-
-            <!-- GRAND COMMUNITY CENTER -->
-
-            <div class="job">
-
-                <div class="job-header">
-                    <h3>GRAND COMMUNITY CENTER - VOLUNTEER</h3>
-
-                    <span class="job-date">
-                        (2024-PRESENT)
-                    </span>
-                </div>
-
-                <p>
-                    Tasks: Website Design, Posters, Invites, Prints,
-                    & Social Media Posts, Promo Video
-                </p>
-
-            </div>
-
-
-            <!-- AGRIDNA3 -->
-
-            <div class="job">
-
-                <div class="job-header">
-                    <h3>AGRIDNA3 - MARKETING</h3>
-
-                    <span class="job-date">
-                        (2023-PRESENT)
-                    </span>
-                </div>
-
-                <p>
-                    Tasks: Website Design (AgriDNA3 and Xylem Plus),
-                    & Social Media Posts
-                </p>
-
-            </div>
-
-
-            <!-- 1868 FARMHOUSE -->
-
-            <div class="job">
-
-                <div class="job-header">
-                    <h3>1868 FARMHOUSE - BUSTRESS</h3>
-
-                    <span class="job-date">
-                        (Jun - Aug 2025)
-                    </span>
-                </div>
-
-                <p>
-                    Tasks: Banquet Server: cleaning dishes,
-                    pictures and videos
-                </p>
-
-            </div>
-
-
-            <!-- THE SHERRY GROUP -->
-
-            <div class="job">
-
-                <div class="job-header">
-                    <h3>THE SHERRY GROUP - MARKETING INTERN</h3>
-
-                    <span class="job-date">
-                        (May - Aug 2025)
-                    </span>
-                </div>
-
-                <p>
-                    Tasks: Spreadsheets, Flyers, Projects, & Posts
-                </p>
-
-            </div>
-
-
-            <!-- FAREWAY CHECKER -->
-
-            <div class="job">
-
-                <div class="job-header">
-                    <h3>FAREWAY GROCERY - CHECKER</h3>
-
-                    <span class="job-date">
-                        (2020 - 2024)
-                    </span>
-                </div>
-
-                <p>
-                    Tasks: Checking, Online Orders, Produce,
-                    Dairy, & Bread
-                </p>
-
-            </div>
-
-
-            <!-- FAREWAY E-COMMERCE -->
-
-            <div class="job">
-
-                <div class="job-header">
-                    <h3>FAREWAY - E-COMMERCE INTERN</h3>
-
-                    <span class="job-date">
-                        (Oct - May 2023)
-                    </span>
-                </div>
-
-                <p>
-                    Tasks: Google Analytics, Meal Plans,
-                    Weekly Ads, & Design
-                </p>
-
-            </div>
-
-
-            <!-- IOWA SPORTS FOUNDATION -->
-
-            <div class="job">
-
-                <div class="job-header">
-                    <h3>IOWA SPORTS FOUNDATION - INTERN</h3>
-
-                    <span class="job-date">
-                        (Oct - May 2023)
-                    </span>
-                </div>
-
-                <p>
-                    Tasks: Making/Scheduling Post, T-Shirt Designs,
-                    & Promo Emails
-                </p>
-
-            </div>
-
-
-            <!-- BOONE COUNTY FAIRGROUNDS -->
-
-            <div class="job">
-
-                <div class="job-header">
-                    <h3>BOONE COUNTY FAIRGROUNDS - INTERN</h3>
-
-                    <span class="job-date">
-                        (Jun - Jul 2022)
-                    </span>
-                </div>
-
-                <p>
-                    Tasks: Social Media Posts, Flyers, Graphics,
-                    Live streams, Ticket Booths, Taking Photos,
-                    & videos
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         DIGITAL MARKETING SECTION
-    ========================= -->
-
-    <section class="marketing-section">
-
-        <h2>DIGITAL MARKETING</h2>
-
-        <p>
-            I have developed experience in the digital marketing field,
-            having worked with clients across diverse industries including
-            sports, insurance, nonprofit, and agriculture.
-        </p>
-
-        <p>
-            My background has equipped me with a strong understanding of
-            digital marketing strategies, and I am eager to continue
-            expanding my knowledge and skills to stay ahead of industry
-            trends.
-        </p>
-
-        <p>
-            I enjoy creating engaging content, developing marketing
-            strategies, connecting with audiences, and finding creative
-            ways to tell a brand’s story.
-        </p>
-
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Maggie</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Maggie.</h1>
+
+            <h2>Marketing Student & Digital Marketing Enthusiast</h2>
+
+            <p>
+                Creative, driven, and passionate about using digital marketing
+                to connect people, brands, and communities.
+            </p>
+
+            <a href="#about" class="button">Learn More About Me</a>
+        </div>
     </section>
 
 
-    <!-- =========================
-         SKILLS
-    ========================= -->
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
 
-    <section class="skills-section">
+            <h2 class="section-title">About Me</h2>
 
-        <h2>SKILLS & INTERESTS</h2>
+            <p>
+                I have developed experience in the digital marketing field,
+                having worked with clients across diverse industries including
+                sports, insurance, nonprofit, and agriculture.
+            </p>
 
-        <div class="skills">
+            <p>
+                My background has equipped me with a strong understanding of
+                digital marketing strategies, and I am eager to continue
+                expanding my knowledge and skills to stay ahead of industry
+                trends.
+            </p>
+
+            <p>
+                I enjoy creating content, developing marketing strategies,
+                building meaningful connections, and finding creative ways
+                to help brands tell their stories.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+
+        <h2 class="section-title">What I Do</h2>
+
+        <div class="skills-container">
 
             <div class="skill">
-                Digital Marketing
+                <h3>Digital Marketing</h3>
+                <p>Developing strategies to help brands reach and engage their audiences.</p>
             </div>
 
             <div class="skill">
-                Social Media
+                <h3>Content Creation</h3>
+                <p>Creating engaging content for social media and digital platforms.</p>
             </div>
 
             <div class="skill">
-                Content Creation
+                <h3>Social Media</h3>
+                <p>Building social media presence through creative and strategic content.</p>
             </div>
 
             <div class="skill">
-                Graphic Design
-            </div>
-
-            <div class="skill">
-                Website Design
-            </div>
-
-            <div class="skill">
-                Event Promotion
-            </div>
-
-            <div class="skill">
-                Tourism Marketing
-            </div>
-
-            <div class="skill">
-                Photography
-            </div>
-
-            <div class="skill">
-                Video Creation
-            </div>
-
-            <div class="skill">
-                Marketing Strategy
+                <h3>Marketing Strategy</h3>
+                <p>Using research and creativity to develop effective marketing campaigns.</p>
             </div>
 
         </div>
@@ -739,27 +333,56 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
 
+        <div class="experience-container">
+
+            <h2 class="section-title">My Experience</h2>
+
+            <div class="experience-box">
+                <h3>Digital Marketing Experience</h3>
+
+                <p>
+                    My experience spans multiple industries, including
+                    <strong>sports, insurance, nonprofit organizations,
+                    and agriculture.</strong>
+                </p>
+
+                <p>
+                    Working with different types of clients has allowed me
+                    to understand how marketing strategies can be adapted
+                    to different audiences, industries, and goals.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            I'm always looking to learn, create, and connect with people
+            who are passionate about marketing.
+        </p>
+
+        <a href="mailto:your@email.com" class="button">
+            Get In Touch
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
     <footer>
-
-        <h2>LET'S CONNECT</h2>
-
-        <p>
-            Interested in marketing, content creation, or working together?
-        </p>
-
-        <p>
-            <br>
-            <a href="mailto:margovb14@gmail.com"
-               style="color:white;">
-                margovb14@gmail.com
-            </a>
-        </p>
-
+        <p>© 2026 Maggie | Personal Portfolio</p>
     </footer>
 
 </body>
 </html>
+```
