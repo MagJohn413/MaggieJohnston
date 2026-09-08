@@ -1,11 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Me | Maggie</title>
+    <title>About Me | Your Name</title>
 
     <style>
         * {
@@ -16,225 +14,213 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f7f5f2;
+            background: #f8f7f4;
             color: #333;
             line-height: 1.6;
         }
 
-        /* Navigation */
-        nav {
-            background-color: #ffffff;
-            padding: 20px 8%;
+        /* Header */
+        header {
+            padding: 25px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            background: white;
+            border-bottom: 1px solid #eee;
         }
 
-        nav .logo {
+        .logo {
             font-size: 24px;
             font-weight: bold;
             color: #333;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav ul li a {
+        nav a {
+            margin-left: 25px;
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
+            color: #555;
+            font-size: 15px;
         }
 
-        nav ul li a:hover {
-            color: #8a6f5a;
+        nav a:hover {
+            color: #000;
         }
 
         /* Hero Section */
         .hero {
-            min-height: 80vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #eee8e1, #ffffff);
+            justify-content: space-between;
+            gap: 60px;
+            padding: 80px 8%;
+            max-width: 1300px;
+            margin: auto;
         }
 
-        .hero-content {
-            max-width: 800px;
+        .hero-text {
+            flex: 1;
         }
 
-        .hero h1 {
-            font-size: 64px;
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            color: #888;
             margin-bottom: 15px;
-            color: #2f2f2f;
         }
 
-        .hero h2 {
-            font-size: 25px;
-            font-weight: normal;
-            color: #8a6f5a;
+        h1 {
+            font-size: clamp(45px, 7vw, 85px);
+            line-height: 1;
             margin-bottom: 25px;
+            font-weight: 700;
         }
 
-        .hero p {
-            font-size: 18px;
-            color: #555;
+        .intro {
+            font-size: 20px;
+            max-width: 600px;
+            color: #666;
+        }
+
+        /* Photo */
+        .hero-photo {
+            flex: 0 0 400px;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* About */
+        .about {
+            background: white;
+            padding: 90px 8%;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .about h2 {
+            font-size: 42px;
             margin-bottom: 30px;
+        }
+
+        .about p {
+            font-size: 18px;
+            max-width: 850px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Cards */
+        .interests {
+            padding: 90px 8%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .interests h2 {
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* Contact */
+        .contact {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 90px 8%;
+        }
+
+        .contact h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #ddd;
+            margin-bottom: 25px;
         }
 
         .button {
             display: inline-block;
             padding: 13px 28px;
-            background-color: #333;
-            color: white;
+            background: white;
+            color: #333;
             text-decoration: none;
-            border-radius: 30px;
-            transition: 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
         }
 
         .button:hover {
-            background-color: #8a6f5a;
-        }
-
-        /* About Section */
-        .about {
-            padding: 90px 10%;
-            background-color: white;
-        }
-
-        .about-container {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .section-title {
-            font-size: 38px;
-            margin-bottom: 25px;
-            color: #333;
-        }
-
-        .about p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        /* Skills */
-        .skills {
-            padding: 90px 10%;
-            background-color: #f7f5f2;
-            text-align: center;
-        }
-
-        .skills-container {
-            max-width: 1000px;
-            margin: 40px auto 0;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .skill {
-            background-color: white;
-            padding: 30px 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
-
-        .skill h3 {
-            margin-bottom: 10px;
-            color: #8a6f5a;
-        }
-
-        /* Experience */
-        .experience {
-            padding: 90px 10%;
-            background-color: white;
-        }
-
-        .experience-container {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .experience-box {
-            margin-top: 30px;
-            padding: 30px;
-            border-left: 4px solid #8a6f5a;
-            background-color: #f7f5f2;
-        }
-
-        .experience-box h3 {
-            margin-bottom: 10px;
-        }
-
-        /* Contact */
-        .contact {
-            padding: 80px 10%;
-            text-align: center;
-            background-color: #333;
-            color: white;
-        }
-
-        .contact h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-
-        .contact p {
-            margin-bottom: 25px;
-        }
-
-        .contact .button {
-            background-color: white;
-            color: #333;
-        }
-
-        .contact .button:hover {
-            background-color: #8a6f5a;
-            color: white;
+            background: #eee;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #222;
+            padding: 25px;
+            background: #222;
             color: #aaa;
             font-size: 14px;
         }
 
         /* Mobile */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 45px;
-            }
-
-            nav {
+        @media (max-width: 800px) {
+            header {
                 flex-direction: column;
                 gap: 15px;
             }
 
-            nav ul {
-                gap: 15px;
+            nav a {
+                margin: 0 8px;
             }
 
-            .skills-container {
-                grid-template-columns: 1fr 1fr;
+            .hero {
+                flex-direction: column;
+                padding-top: 50px;
             }
-        }
 
-        @media (max-width: 500px) {
-            .skills-container {
+            .hero-photo {
+                flex: none;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .cards {
                 grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 55px;
             }
         }
     </style>
@@ -243,116 +229,105 @@
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="logo">Maggie</div>
+    <header>
+        <div class="logo">YOUR NAME</div>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#interests">Interests</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Maggie.</h1>
 
-            <h2>Marketing Student & Digital Marketing Enthusiast</h2>
+        <div class="hero-text">
+            <div class="small-title">A little about me</div>
 
-            <p>
-                Creative, driven, and passionate about using digital marketing
-                to connect people, brands, and communities.
+            <h1>Hello,<br>I'm Your Name.</h1>
+
+            <p class="intro">
+                I'm a marketing student, creative thinker, and someone who
+                loves turning ideas into meaningful experiences.
             </p>
-
-            <a href="#about" class="button">Learn More About Me</a>
         </div>
+
+        <div class="hero-photo">
+            <!-- Replace this image URL with your own photo -->
+            <img src="https://via.placeholder.com/600x750"
+                 alt="Photo of Your Name">
+        </div>
+
     </section>
 
 
-    <!-- About Section -->
+    <!-- About Me -->
     <section class="about" id="about">
+
         <div class="about-container">
 
-            <h2 class="section-title">About Me</h2>
+            <div class="small-title">Get to know me</div>
+
+            <h2>More than just a resume.</h2>
 
             <p>
-                I have developed experience in the digital marketing field,
-                having worked with clients across diverse industries including
-                sports, insurance, nonprofit, and agriculture.
+                Hi! I'm Your Name. I'm currently a senior in college studying
+                marketing and have a passion for creativity, communication,
+                and connecting with people.
             </p>
 
             <p>
-                My background has equipped me with a strong understanding of
-                digital marketing strategies, and I am eager to continue
-                expanding my knowledge and skills to stay ahead of industry
-                trends.
+                Throughout college, I've had the opportunity to work on
+                different marketing projects, create content, work with
+                brands, and help promote events and organizations. I love
+                being able to take an idea and turn it into something people
+                can see, experience, and remember.
             </p>
 
             <p>
-                I enjoy creating content, developing marketing strategies,
-                building meaningful connections, and finding creative ways
-                to help brands tell their stories.
+                When I'm not working on a project, you can usually find me
+                spending time with family and friends, creating content,
+                exploring new ideas, or finding ways to get involved in my
+                community.
             </p>
 
         </div>
+
     </section>
 
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <!-- Interests -->
+    <section class="interests" id="interests">
 
-        <h2 class="section-title">What I Do</h2>
+        <div class="small-title">What I love</div>
 
-        <div class="skills-container">
+        <h2>A few of my favorite things.</h2>
 
-            <div class="skill">
-                <h3>Digital Marketing</h3>
-                <p>Developing strategies to help brands reach and engage their audiences.</p>
+        <div class="cards">
+
+            <div class="card">
+                <h3>Marketing</h3>
+                <p>
+                    I love creating marketing strategies and finding creative
+                    ways to help brands connect with their audiences.
+                </p>
             </div>
 
-            <div class="skill">
+            <div class="card">
                 <h3>Content Creation</h3>
-                <p>Creating engaging content for social media and digital platforms.</p>
-            </div>
-
-            <div class="skill">
-                <h3>Social Media</h3>
-                <p>Building social media presence through creative and strategic content.</p>
-            </div>
-
-            <div class="skill">
-                <h3>Marketing Strategy</h3>
-                <p>Using research and creativity to develop effective marketing campaigns.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
-
-        <div class="experience-container">
-
-            <h2 class="section-title">My Experience</h2>
-
-            <div class="experience-box">
-                <h3>Digital Marketing Experience</h3>
-
                 <p>
-                    My experience spans multiple industries, including
-                    <strong>sports, insurance, nonprofit organizations,
-                    and agriculture.</strong>
+                    From social media posts to videos and photography,
+                    I enjoy creating content that tells a story.
                 </p>
+            </div>
 
+            <div class="card">
+                <h3>Community</h3>
                 <p>
-                    Working with different types of clients has allowed me
-                    to understand how marketing strategies can be adapted
-                    to different audiences, industries, and goals.
+                    I love being involved in my community and helping create
+                    events and experiences that bring people together.
                 </p>
             </div>
 
@@ -361,17 +336,16 @@
     </section>
 
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section class="contact" id="contact">
 
-        <h2>Let's Connect</h2>
+        <h2>Let's connect.</h2>
 
         <p>
-            I'm always looking to learn, create, and connect with people
-            who are passionate about marketing.
+            I'd love to connect, collaborate, or simply say hello.
         </p>
 
-        <a href="mailto:your@email.com" class="button">
+        <a class="button" href="mailto:youremail@example.com">
             Get In Touch
         </a>
 
@@ -380,9 +354,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Maggie | Personal Portfolio</p>
+        © 2026 Your Name. All rights reserved.
     </footer>
 
 </body>
 </html>
-```
