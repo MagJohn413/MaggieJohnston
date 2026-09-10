@@ -239,3 +239,7 @@ footer {
     }
 }
 ```
+.nav-links a.active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
