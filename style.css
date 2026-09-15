@@ -99,3 +99,13 @@ footer {
         flex-direction: column;
     }
 }
+.hero {
+    background: url(.hero {
+    background: #e8dfd3;
+}
+) center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    color: #3a2f28;
+}
