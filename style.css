@@ -109,3 +109,7 @@ footer {
     border-radius: 8px;
     color: #3a2f28;
 }
+.sidebar {
+    position: sticky;
+    top: 20px;
+}
