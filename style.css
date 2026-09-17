@@ -16,6 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+    align-items: center;
 }
 
 .logo {
@@ -31,6 +32,7 @@ nav ul {
     display: flex;
     gap: 20px;
     padding: 10px 0;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -82,6 +84,46 @@ main {
     flex: 1;
 }
 
+/* Portfolio gallery */
+.portfolio-section {
+    width: 100%;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.portfolio-item {
+    margin: 0;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(58, 47, 40, 0.08);
+    border: 1px solid #e9e0d2;
+}
+
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background: #f3eee7;
+}
+
+.portfolio-item figcaption {
+    padding: 12px 14px;
+    font-weight: 700;
+    color: #5a4a42;
+    background: #fff;
+}
+
+.portfolio-intro {
+    margin-bottom: 20px;
+}
+
 /* Footer */
 footer {
     margin-top: 40px;
@@ -98,7 +140,11 @@ footer {
     .product-grid {
         flex-direction: column;
     }
+    .portfolio-gallery {
+        grid-template-columns: 1fr;
+    }
 }
+
 .hero {
     background: url(.hero {
     background: #e8dfd3;
@@ -109,6 +155,7 @@ footer {
     border-radius: 8px;
     color: #3a2f28;
 }
+
 .sidebar {
     position: sticky;
     top: 20px;
